@@ -12,9 +12,9 @@ def menu():
             \r(a) > Add A New Product To The Database
             \r(b) > Make A Backup Of The Entire Inventory
             \r(q) > Quit''')
-        choice = input("\nWhat would you like to do on Store Inventory?\n").lower() 
-        if choice.lower() in ('v', 'a', 'b', 'q'):
-            return choice.lower()
+        chosen_value = input("\nWhat would you like to do on Store Inventory?\n").lower() 
+        if chosen_value.lower() in ('v', 'a', 'b', 'q'):
+            return chosen_value.lower()
         else:
             input('''
                   \nPlease only choose one of the options above.
@@ -181,12 +181,12 @@ def add_csv():
 def app():
     app_running = True
     while app_running:
-        choice = menu()
-        if choice == 'v':
+        chosen_value = menu()
+        if chosen_value == 'v':
             view_product()
-        elif choice == 'a':
+        elif chosen_value == 'a':
             add_product()
-        elif choice == 'b':
+        elif chosen_value == 'b':
             backup_csv()
         else:
             print('****** GOODBYEEEEEE!! ******')
